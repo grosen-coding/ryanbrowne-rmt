@@ -55,7 +55,7 @@ const HeroContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 75vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -82,12 +82,13 @@ const TitleContainer = styled.div`
   z-index: 11;
 
   h1 {
-    color: var(--green-light);
+    /* color: var(--green-light); */
+    color: #fff;
     font-weight: 400;
     font-size: 4rem;
     letter-spacing: 1.2px;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.8;
     animation: fadeIn 2s ease-in-out;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
       -2px -2px 5px rgba(0, 0, 0, 0.5);
@@ -98,7 +99,7 @@ const TitleContainer = styled.div`
       opacity: 0;
     }
     100% {
-      opacity: 0.9;
+      opacity: 0.8;
     }
   }
 
