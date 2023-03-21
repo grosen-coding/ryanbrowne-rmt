@@ -45,6 +45,10 @@ const Card = styled.div`
   position: relative;
 
   &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &:hover {
     & > div:nth-child(2) {
       right: 3px;
       opacity: 0.5;
@@ -67,6 +71,7 @@ const Card = styled.div`
     text-align: center;
     margin: 2rem 0 4rem;
     padding: 0 2rem;
+    opacity: 0.7;
   }
 `;
 

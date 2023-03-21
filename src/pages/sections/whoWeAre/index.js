@@ -98,5 +98,6 @@ const WhoWeAreContent = styled.div`
   p {
     font-size: 1rem;
     line-height: 1.8;
+    opacity: 0.7;
   }
 `;

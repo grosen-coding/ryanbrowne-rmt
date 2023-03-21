@@ -78,17 +78,19 @@ const TitleContainer = styled.div`
   border-radius: 0.5rem;
 
   text-align: center;
-  width: 50%;
+  width: 60%;
   z-index: 11;
 
   h1 {
-    color: #fff;
-    font-weight: 300;
-    font-size: 3.8rem;
+    color: var(--green-light);
+    font-weight: 400;
+    font-size: 4rem;
     letter-spacing: 1.2px;
     margin-bottom: 2rem;
     opacity: 0.9;
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+      -2px -2px 5px rgba(0, 0, 0, 0.5);
   }
 
   @keyframes fadeIn {
@@ -96,7 +98,7 @@ const TitleContainer = styled.div`
       opacity: 0;
     }
     100% {
-      opacity: 1;
+      opacity: 0.9;
     }
   }
 
@@ -104,6 +106,10 @@ const TitleContainer = styled.div`
     font-size: 1.3rem;
     font-weight: 300;
     color: #fff;
+    opacity: 0.8;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
   }
 `;
 
@@ -111,7 +117,7 @@ const ButtonGroup = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin: 2rem 0;
   opacity: 0;
   animation: fadeUp 1.5s ease-in forwards;
   animation-delay: 1.5s;

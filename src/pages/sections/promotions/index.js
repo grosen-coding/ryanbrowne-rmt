@@ -12,7 +12,7 @@ function Promotions() {
       title="Promotions"
       height="450px"
       padding="4rem 0"
-      bgColor="url(/images/landscape/violet-flowers.jpeg) no-repeat center center/cover"
+      bgColor="url(/images/landscape/violet-flowers.jpeg) no-repeat center center/cover fixed"
       position="relative"
     >
       <Overlay />
@@ -88,5 +88,6 @@ const PromotionContent = styled.div`
     font-size: 1.2rem;
     font-weight: 300;
     line-height: 1.5;
+    opacity: 0.8;
   }
 `;
