@@ -25,7 +25,7 @@ header {
     --dark: #262525;
     --beige-dark: #895224;
     --beige: #c79f7a;
-    --green-med: #9CBE9C;
+    --green-med: rgb(156, 190, 156);
     --green-light: #b6c199;
     --text-light: #F6F9F6;
     --text-dark: #585656;

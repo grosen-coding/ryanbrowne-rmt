@@ -18,12 +18,14 @@ function Hero() {
             bgColor="transparent"
             border="1px solid #fff"
             textColor="#fff"
+            margin={"0 1rem 0 0"}
           />
           <Button
             border="none"
             textColor="#fff"
             text="Book Now"
             bgColor="var(--green-med)"
+            margin={"0 0 0 1rem"}
           />
         </ButtonGroup>
       </TitleContainer>
@@ -38,7 +40,8 @@ const HeroContainer = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 70vh;
+  background-attachment: fixed;
+  height: 75vh;
   width: 100%;
   display: flex;
   justify-content: center;

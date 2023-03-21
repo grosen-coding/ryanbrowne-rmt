@@ -121,7 +121,6 @@ const ServiceCard = styled.div`
     font-weight: 300;
     padding: 0 1rem;
     text-align: center;
-    /* padding: 2rem 3rem; */
   }
 `;
 

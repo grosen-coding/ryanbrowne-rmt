@@ -32,7 +32,7 @@ function Featured() {
       className="featured-services"
       id="featured-services"
       height="auto"
-      padding="4rem 0"
+      padding="4rem 0 5rem"
     >
       <PageWrapper>
         <FeaturedTitle>

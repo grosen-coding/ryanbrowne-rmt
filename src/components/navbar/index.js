@@ -1,14 +1,38 @@
 // src/components/Navbar.js
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Nav, NavLink, NavMenu } from "./Navbar.styles";
 import Hamburger from "../hamburgerMenu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const initialNavTop = useRef(null);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (initialNavTop.current === null) {
+        initialNavTop.current = document
+          .getElementById("navbar")
+          .getBoundingClientRect().top;
+      }
+
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      setIsSticky(
+        document.getElementById("navbar").getBoundingClientRect().top <= 0 &&
+          scrollTop > initialNavTop.current
+      );
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const navLinks = [
     { title: "Home", path: "#home" },
@@ -22,7 +46,7 @@ const Navbar = () => {
   ];
 
   return (
-    <Nav>
+    <Nav id="navbar" isSticky={isSticky}>
       <Hamburger isOpen={isOpen} toggle={toggle} />
       <NavMenu isOpen={isOpen}>
         {navLinks.map(({ title, path }) => (

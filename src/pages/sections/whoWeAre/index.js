@@ -29,6 +29,7 @@ function WhoWeAre() {
               textColor="#fff"
               text="Book Now"
               bgColor="var(--green-med)"
+              margin={"2rem 0 0 0"}
             >
               Learn More
             </Button>

@@ -1,6 +1,18 @@
 // src/components/Navbar.styles.js
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "react-scroll";
+
+const stickyNavStyles = css`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 66px; // 10% increase in height
+  padding: 0;
+  border-radius: 0;
+  transform: none;
+  z-index: 50;
+`;
 
 export const Nav = styled.nav`
   background-color: var(--green-med);
@@ -17,6 +29,9 @@ export const Nav = styled.nav`
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  transition: all 0.3s ease-in-out;
+
+  ${({ isSticky }) => isSticky && stickyNavStyles};
 `;
 
 export const NavMenu = styled.div`

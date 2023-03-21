@@ -6,6 +6,7 @@ import { PageWrapper } from "./components/wrapper";
 import Header from "./components/header";
 import Home from "./pages/home";
 import Footer from "./components/footer";
+import ScrollToTop from "./components/scrollToTop/scrollToTop";
 
 // const Section = styled.section`
 //   background-color: ${({ bgColor }) => bgColor || "inherit"};
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <PageWrapper>
+        <ScrollToTop />
         <Header />
       </PageWrapper>
 

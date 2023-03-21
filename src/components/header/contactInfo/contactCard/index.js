@@ -29,7 +29,7 @@ const CardContainer = styled.div`
   height: 60px;
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 1rem 0;
 
   span {
     color: var(--text-dark);
@@ -40,7 +40,7 @@ const CardContainer = styled.div`
 const IconWrapper = styled.div`
   color: var(--text-dark);
   font-size: 1.5rem;
-  padding-right: 1rem;
+  padding-right: 0.5rem;
 `;
 
 const CardInfo = styled.div`
@@ -54,6 +54,7 @@ const CardInfo = styled.div`
   }
 
   h5 {
-    opacity: 0.8;
+    opacity: 0.7;
+    font-size: 1rem;
   }
 `;
