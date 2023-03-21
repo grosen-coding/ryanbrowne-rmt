@@ -1,10 +1,19 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useRef } from "react";
+import styled, { keyframes } from "styled-components";
+import { IoIosArrowDown } from "react-icons/io";
 import Button from "../button";
 
 function Hero() {
+  const heroRef = useRef();
+
+  const scrollToNextSection = () => {
+    window.scrollTo({
+      top: heroRef.current.offsetHeight,
+      behavior: "smooth",
+    });
+  };
   return (
-    <HeroContainer>
+    <HeroContainer ref={heroRef}>
       <TitleContainer>
         <h1>Relaxing is Never Easy on Your Own</h1>
         <h2>
@@ -31,6 +40,9 @@ function Hero() {
           />
         </ButtonGroup>
       </TitleContainer>
+      <ScrollDownIndicator onClick={scrollToNextSection}>
+        <IoIosArrowDown />
+      </ScrollDownIndicator>
     </HeroContainer>
   );
 }
@@ -57,7 +69,7 @@ const HeroContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 `;
 
@@ -76,6 +88,16 @@ const TitleContainer = styled.div`
     letter-spacing: 1.2px;
     margin-bottom: 2rem;
     opacity: 0.9;
+    animation: fadeIn 2.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   h2 {
@@ -90,4 +112,57 @@ const ButtonGroup = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  opacity: 0;
+  animation: fadeUp 1.5s ease-in forwards;
+  animation-delay: 1.5s;
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
+
+const bounce = keyframes`
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+`;
+
+const fadeDown = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const ScrollDownIndicator = styled.div`
+  position: absolute;
+  bottom: 2rem;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+
+  animation: ${bounce} 2s ease infinite, ${fadeDown} 3s ease forwards;
+  animation-delay: 3s;
 `;

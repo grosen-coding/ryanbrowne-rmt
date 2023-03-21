@@ -25,10 +25,13 @@ const LogoContainer = styled.div`
 
   h3 {
     opacity: 0.7;
+    font-size: 2rem;
+    font-weight: 600;
   }
 
   p {
     opacity: 0.5;
+    font-size: 1.2rem;
   }
 
   img {

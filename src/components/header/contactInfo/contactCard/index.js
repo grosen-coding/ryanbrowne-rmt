@@ -51,10 +51,12 @@ const CardInfo = styled.div`
 
   h4 {
     font-weight: 400;
+    letter-spacing: 1.1px;
+    font-size: 0.9rem;
   }
 
   h5 {
-    opacity: 0.7;
+    opacity: 0.6;
     font-size: 1rem;
   }
 `;
