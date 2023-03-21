@@ -6,7 +6,7 @@ import Navbar from "../navbar";
 
 function Header() {
   return (
-    <HeaderContainer>
+    <HeaderContainer id="home">
       <Logo />
       <ContactInfo />
       <Navbar />
@@ -16,7 +16,7 @@ function Header() {
 
 export default Header;
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;

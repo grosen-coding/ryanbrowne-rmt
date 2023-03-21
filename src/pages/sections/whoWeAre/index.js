@@ -7,8 +7,8 @@ function WhoWeAre() {
   return (
     <Section
       bgColor="#fff"
-      className="who-we-are"
-      id="who-we-are"
+      className="about"
+      id="about"
       height="600px"
       padding="0"
     >
@@ -30,6 +30,7 @@ function WhoWeAre() {
               text="Book Now"
               bgColor="var(--green-med)"
               margin={"2rem 0 0 0"}
+              hover="background-color: transparent; color: var(--green-med); outline: 1px solid var(--green-med);"
             >
               Learn More
             </Button>

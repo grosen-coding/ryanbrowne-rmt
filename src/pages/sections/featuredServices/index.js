@@ -30,7 +30,7 @@ function Featured() {
     <Section
       bgColor="var(--text-light)"
       className="featured-services"
-      id="featured-services"
+      id="services"
       height="auto"
       padding="4rem 0 5rem"
     >

@@ -16,16 +16,18 @@ function Hero() {
           <Button
             text="View Services"
             bgColor="transparent"
-            border="1px solid #fff"
+            border="2px solid #fff"
             textColor="#fff"
             margin={"0 1rem 0 0"}
+            hover="background-color: #fff; color: var(--green-med);"
           />
           <Button
-            border="none"
+            border="2px solid var(--green-med)"
             textColor="#fff"
             text="Book Now"
             bgColor="var(--green-med)"
             margin={"0 0 0 1rem"}
+            hover="background-color: transparent; color: var(--green-med); border: 2px solid #fff;"
           />
         </ButtonGroup>
       </TitleContainer>

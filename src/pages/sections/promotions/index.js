@@ -34,6 +34,7 @@ function Promotions() {
             text="Book Now"
             bgColor="var(--green-med)"
             margin={"2rem 0 0 0"}
+            hover="background-color: #fff; color: var(--green-med);"
           >
             Book Now
           </Button>

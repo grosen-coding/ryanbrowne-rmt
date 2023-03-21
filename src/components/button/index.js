@@ -2,7 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { IoIosArrowForward } from "react-icons/io";
 
-function Button({ bgColor, text, border, textColor, margin, padding, width }) {
+function Button({
+  bgColor,
+  text,
+  border,
+  textColor,
+  margin,
+  padding,
+  width,
+  hover,
+}) {
   return (
     <ButtonCTA
       textColor={textColor}
@@ -11,6 +20,7 @@ function Button({ bgColor, text, border, textColor, margin, padding, width }) {
       margin={margin}
       padding={padding || "1rem 2rem"}
       width={width || "auto"}
+      hover={hover}
     >
       {text}
       <span>
@@ -49,5 +59,9 @@ const ButtonCTA = styled.button`
     svg {
       font-size: 1.2rem;
     }
+  }
+
+  &:hover {
+    ${(props) => props.hover && props.hover}
   }
 `;

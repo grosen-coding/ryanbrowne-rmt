@@ -7,11 +7,19 @@ const stickyNavStyles = css`
   top: 0;
   left: 0;
   width: 100%;
-  height: 66px; // 10% increase in height
+  height: 50px;
+  opacity: 0.8;
+  margin: 0 auto;
   padding: 0;
   border-radius: 0;
   transform: none;
   z-index: 50;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -69,6 +77,11 @@ export const NavLink = styled(Link)`
 
   &:hover {
     color: #555;
+  }
+
+  &:active,
+  &:focus {
+    border-bottom: 2px solid #555;
   }
 
   @media (max-width: 540px) {

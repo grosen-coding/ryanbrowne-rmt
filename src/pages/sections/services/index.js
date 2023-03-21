@@ -33,16 +33,16 @@ const services = [
   },
 ];
 
-function WhoWeAre() {
+function ServicesSection() {
   return (
     <Section
       bgColor="#fff"
       className="who-we-are"
-      id="who-we-are"
+      id="services"
       height="500px"
       padding="0"
     >
-      <AboutMe>
+      <ServiceContainer>
         <Left>
           <Services>
             {services.map((service, index) => (
@@ -65,14 +65,14 @@ function WhoWeAre() {
           </Services>
         </Left>
         <Right></Right>
-      </AboutMe>
+      </ServiceContainer>
     </Section>
   );
 }
 
-export default WhoWeAre;
+export default ServicesSection;
 
-const AboutMe = styled.div`
+const ServiceContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
