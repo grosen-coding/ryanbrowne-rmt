@@ -15,7 +15,6 @@ function Home() {
       <WhoWeAre />
       <Services />
       <Promotions />
-      <Testimonials />
       <Blog />
     </>
   );
