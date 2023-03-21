@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import BlogPost from "./blogPost/BlogPost";
 import PropTypes from "prop-types";
+import Button from "../../../components/button";
 
 const BlogSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4rem 0 6rem;
+  margin: 4rem 0;
   width: 100%;
 `;
 
@@ -76,6 +77,14 @@ const Blog = () => {
           />
         ))}
       </Grid>
+      <Button
+        border="2px solid var(--green-med)"
+        textColor="#fff"
+        text="View All"
+        bgColor="var(--green-med)"
+        margin={"4rem 0 0"}
+        hover="background-color: transparent; color: var(--green-med); border: 2px solid var(--green-med);"
+      />
     </BlogSection>
   );
 };
