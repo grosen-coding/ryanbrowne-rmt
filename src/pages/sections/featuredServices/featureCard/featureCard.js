@@ -32,7 +32,7 @@ function FeatureCard({ title, imgSrc, description }) {
 export default FeatureCard;
 
 const Card = styled.div`
-  width: 400px;
+  width: 100%;
   height: 100%;
   background-color: #fff;
   border-radius: 10px;

@@ -12,7 +12,6 @@ const navLinks = [
   { title: "Mission", path: "#about" },
   { title: "Services", path: "#services" },
   { title: "Promotions", path: "#promotions" },
-  { title: "Testimonials", path: "#testimonials" },
   { title: "Blog", path: "#blog" },
   { title: "Contact", path: "#contact" },
 ];

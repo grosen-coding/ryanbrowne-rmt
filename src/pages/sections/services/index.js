@@ -35,7 +35,7 @@ const services = [
 
 function ServicesSection() {
   return (
-    <Section bgColor="#fff" id="services" height="500px" padding="0">
+    <Section bgColor="#fff" id="services" height="auto" padding="0">
       <ServiceContainer>
         <Left>
           <Services>
@@ -69,6 +69,7 @@ export default ServicesSection;
 const ServiceContainer = styled.div`
   width: 100%;
   height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -88,6 +89,7 @@ const Services = styled.div`
 `;
 
 const ServiceCard = styled.div`
+  min-height: 100%;
   background-color: var(--text-light);
   display: flex;
   flex-direction: column;
@@ -134,8 +136,9 @@ const IconContainer = styled.div`
 const Right = styled.div`
   background-image: url("/images/landscape/accent-oils-flowers.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position: cover;
   background-repeat: no-repeat;
   width: 40%;
-  height: 100%;
+  height: 500px;
+  min-height: 100%;
 `;

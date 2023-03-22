@@ -7,7 +7,7 @@ const Post = styled.article`
   flex-direction: column;
   border: 1px solid #ccc;
   border-radius: 5px;
-
+  height: 550px;
   transition: all 0.3s ease-in-out;
   position: relative;
   &:hover {
@@ -122,9 +122,9 @@ const ButtonFull = styled.div`
 `;
 const ButtonWrapper = styled.div`
   width: 100%;
-  height: 100%;
-  position: relative;
-  bottom: -25px;
+
+  position: absolute;
+  bottom: 0;
   z-index: 5;
 
   &:hover ${ButtonArrow}, &:focus ${ButtonArrow} {
@@ -164,26 +164,25 @@ const BlogPost = ({ title, date, excerpt, image, categories }) => (
       <EntryContent>
         <p>{excerpt}</p>
       </EntryContent>
-      <EntryFooter>
-        <ButtonWrapper>
-          <ButtonArrow>
-            <Arrow>&#x2192;</Arrow>
-          </ButtonArrow>
-          <ButtonFull>
-            <Button
-              border="none"
-              textColor="#fff"
-              text="Read More"
-              bgColor="var(--green-med)"
-              margin="0"
-              padding="1rem 2rem"
-              width="200px"
-            />
-          </ButtonFull>
-        </ButtonWrapper>
-      </EntryFooter>
+      <EntryFooter></EntryFooter>
     </ContentWrap>
     <Underline />
+    <ButtonWrapper>
+      <ButtonArrow>
+        <Arrow>&#x2192;</Arrow>
+      </ButtonArrow>
+      <ButtonFull>
+        <Button
+          border="none"
+          textColor="#fff"
+          text="Read More"
+          bgColor="var(--green-med)"
+          margin="0"
+          padding="1rem 2rem"
+          width="200px"
+        />
+      </ButtonFull>
+    </ButtonWrapper>
   </Post>
 );
 

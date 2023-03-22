@@ -16,10 +16,7 @@ function Hero() {
     <HeroContainer ref={heroRef} id="home">
       <TitleContainer>
         <h1>Relaxing is Never Easy on Your Own</h1>
-        <h2>
-          Come and discover your oasis. It has never been easier to take a break
-          from stress and the harmful factors that surround you every day!
-        </h2>
+        <h2>Come and discover your oasis.</h2>
 
         <ButtonGroup>
           <Button
@@ -35,7 +32,7 @@ function Hero() {
             textColor="#fff"
             text="Book Now"
             bgColor="var(--green-med)"
-            margin={"0 0 0 1rem"}
+            margin={"0"}
             hover="background-color: transparent; color: var(--green-med); border: 2px solid #fff;"
           />
         </ButtonGroup>
@@ -87,7 +84,9 @@ const TitleContainer = styled.div`
     font-weight: 400;
     font-size: 4rem;
     letter-spacing: 1.2px;
+    line-height: 1.2;
     margin-bottom: 2rem;
+    /* margin-top: -3rem; */
     opacity: 0.8;
     animation: fadeIn 2s ease-in-out;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
@@ -107,18 +106,30 @@ const TitleContainer = styled.div`
     font-size: 1.3rem;
     font-weight: 300;
     color: #fff;
-    opacity: 0.8;
+    opacity: 0;
     width: 70%;
     margin: 0 auto;
     margin-bottom: 4rem;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 2s;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0.8;
+      }
+    }
   }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
-  justify-content: center;
+  width: 50%;
+  justify-content: space-between;
   align-items: center;
-  margin: 2rem 0;
+  margin: 2rem auto;
   opacity: 0;
   animation: fadeUp 1.5s ease-in forwards;
   animation-delay: 1.5s;
@@ -162,9 +173,8 @@ const fadeDown = keyframes`
 
 const ScrollDownIndicator = styled.div`
   position: absolute;
-  bottom: 2rem;
-  right: 50%;
-  transform: translateX(50%);
+  bottom: 0;
+
   font-size: 3rem;
   color: #fff;
   cursor: pointer;

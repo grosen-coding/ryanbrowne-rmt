@@ -27,7 +27,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
-  width: 60%;
+  width: 70%;
 `;
 
 const Blog = () => {
