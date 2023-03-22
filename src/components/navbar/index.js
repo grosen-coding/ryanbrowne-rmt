@@ -1,6 +1,6 @@
 // src/components/Navbar.js
 import React, { useState, useEffect, useRef } from "react";
-import { Nav, NavLink, NavMenu } from "./Navbar.styles";
+import { Nav, ScrollLink, NavMenu } from "./Navbar.styles";
 import Hamburger from "../hamburgerMenu";
 
 const Navbar = () => {
@@ -37,12 +37,11 @@ const Navbar = () => {
   const navLinks = [
     { title: "Home", path: "#home" },
     { title: "Rejuvenate", path: "#featuredServices" },
-    { title: "Misson", path: "#about" },
+    { title: "About Me", path: "#about" },
     { title: "Services", path: "#services" },
     { title: "Promotions", path: "#promotions" },
-    { title: "Testimonials", path: "#testimonials" },
     { title: "Blog", path: "#blog" },
-    { title: "Contact", path: "#contact" },
+    { title: "Contact", path: "/contact" },
   ];
 
   return (
@@ -50,9 +49,9 @@ const Navbar = () => {
       <Hamburger isOpen={isOpen} toggle={toggle} />
       <NavMenu isOpen={isOpen}>
         {navLinks.map(({ title, path }) => (
-          <NavLink
+          <ScrollLink
             key={title}
-            to={path}
+            to={path.slice(1)}
             smooth={true}
             duration={500}
             spy={true}
@@ -61,7 +60,7 @@ const Navbar = () => {
             onClick={toggle}
           >
             {title}
-          </NavLink>
+          </ScrollLink>
         ))}
       </NavMenu>
     </Nav>

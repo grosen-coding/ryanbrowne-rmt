@@ -59,7 +59,7 @@ const Blog = () => {
   ];
 
   return (
-    <BlogSection>
+    <BlogSection id="blog">
       <SectionTitle>Blog</SectionTitle>
       <SectionDescription>
         Welcome to our blog! Here you'll find our latest news, updates, and

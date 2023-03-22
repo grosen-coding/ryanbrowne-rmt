@@ -13,7 +13,7 @@ function Hero() {
     });
   };
   return (
-    <HeroContainer ref={heroRef}>
+    <HeroContainer ref={heroRef} id="home">
       <TitleContainer>
         <h1>Relaxing is Never Easy on Your Own</h1>
         <h2>

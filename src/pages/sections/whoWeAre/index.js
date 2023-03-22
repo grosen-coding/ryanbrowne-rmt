@@ -5,13 +5,7 @@ import Button from "../../../components/button";
 
 function WhoWeAre() {
   return (
-    <Section
-      bgColor="#fff"
-      className="about"
-      id="about"
-      height="600px"
-      padding="0"
-    >
+    <Section bgColor="#fff" id="about" height="600px" padding="0">
       <AboutMe>
         <Left></Left>
         <Right>

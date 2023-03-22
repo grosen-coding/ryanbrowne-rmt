@@ -64,12 +64,13 @@ export const NavMenu = styled.div`
   }
 `;
 
-export const NavLink = styled(Link)`
+export const ScrollLink = styled(Link)`
   /* margin-left: 1.5rem; */
   font-size: 0.9rem;
   margin: 0 1rem;
   font-weight: 400;
   text-transform: uppercase;
+  text-decoration: none;
   letter-spacing: 1px;
   color: var(--text-light);
   cursor: pointer;
@@ -81,7 +82,7 @@ export const NavLink = styled(Link)`
 
   &:active,
   &:focus {
-    border-bottom: 2px solid #555;
+    border-bottom: 2px solid #5554;
   }
 
   @media (max-width: 540px) {

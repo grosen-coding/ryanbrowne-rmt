@@ -35,13 +35,7 @@ const services = [
 
 function ServicesSection() {
   return (
-    <Section
-      bgColor="#fff"
-      className="who-we-are"
-      id="services"
-      height="500px"
-      padding="0"
-    >
+    <Section bgColor="#fff" id="services" height="500px" padding="0">
       <ServiceContainer>
         <Left>
           <Services>

@@ -4,7 +4,6 @@ import Featured from "../sections/featuredServices";
 import Promotions from "../sections/promotions";
 import Services from "../sections/services";
 import WhoWeAre from "../sections/whoWeAre";
-import Testimonials from "../sections/testimonials";
 import Blog from "../sections/blog";
 
 function Home() {
