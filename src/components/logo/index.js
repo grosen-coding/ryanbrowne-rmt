@@ -5,7 +5,7 @@ function Logo() {
   return (
     <>
       <LogoContainer>
-        <img src="./images/icons/flower-ryanrmt.png" alt="" />
+        <img src="./images/icons/buddha-ryanrmt.png" alt="" />
         <div>
           <h3>Ryan Browne RMT</h3>
           <p>Holistic Massage Therapy</p>

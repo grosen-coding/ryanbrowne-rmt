@@ -86,5 +86,6 @@ const FeaturedServices = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
-  margin-top: 4rem;
+  margin: 4rem auto 0;
+  width: 80%;
 `;
